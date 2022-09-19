@@ -1,10 +1,10 @@
 body {
     font-family: 'Roboto Mono', monospace;
-    min-height: 540px;
-    background-image: url('./img/200w.webp');
-    background-color: #000000;
-    background-size: cover;
-    background-position: center top;
+    min-height: 854px;
+    background-image: url('https://i.pinimg.com/originals/01/ae/b3/01aeb3e04d3ac5b8fc55b05318cdd90f.jpg');
+    background-color: #050303;
+    background-size: 200vh;
+    background-position: center;
     background-repeat: no-repeat;
     padding-bottom: 20vh;
 }
@@ -19,27 +19,33 @@ body {
     margin: 5px 0;
 }
 
-button {
+button, .button-jogar {
     padding: .8rem 1.5rem;
     margin: 1rem 0;
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 h2 {
     color: white;
 }
 
-#carta-jogador {
+#carta-jogador, #carta-maquina {
     width: 360px;
     height: 500px;
     overflow: auto;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
+    position: relative;
+    background-size: 350px 300px;
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 10px;
+    border-radius: 33px;
 }
 
 #carta-jogador h3 {
@@ -47,7 +53,7 @@ h2 {
 }
 
 .carta-imagem {
-    border: 1px solid rgb(240, 238, 238);
+    border: 1px solid black;
     height: 100px;
     margin: 10px;
 }
@@ -59,13 +65,55 @@ h2 {
 
 .carta-status {
     height: 160px;
-    margin: 1.5rem;
+    margin: 0.1rem;
+    color: white;
+    z-index: 2;
 }
 
 .carta-status input {
-    margin: 20px 10px;
+    margin: 15px 10px;
 }
 
-.opcoes {
+.resultado-final {
     color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding: 1rem;
+    border: 2px solid black;
+    background-color: black;
+}
+
+.--spacing {
+    margin-left: 2.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.carta-subtitle {
+    z-index: 2;
+    position: absolute;
+    top: 19px;
+    left: 35px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#cartas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carta-status p {
+    margin-bottom: 2rem;
 }
