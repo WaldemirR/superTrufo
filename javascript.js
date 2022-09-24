@@ -397,7 +397,44 @@ var carta40 = {
     }
 };
 
-var cartas = [carta1, carta2,carta3, carta4, carta6, carta7, carta8, carta9, carta10, carta11, carta12, carta13, carta14, carta16, carta17, carta20, carta21, carta22, carta23, carta24, carta25, carta26, carta27, carta28, carta29, carta30, carta31, carta32, carta33, carta34, carta35, carta36, carta37, carta38, carta39, carta40];
+var cartas = [carta1
+                ,carta2
+                 ,carta3
+                  ,carta4
+                   ,carta5
+                    ,carta6
+                     ,carta7
+                      ,carta8
+                       ,carta9
+                        ,carta10
+                         ,carta11
+                          ,carta12
+                           ,carta13
+                            ,carta14
+                             ,carta16
+                              ,carta17
+                               ,carta20
+                                ,carta21
+                                 ,carta22
+                                  ,carta23
+                                   ,carta24
+                                    ,carta25
+                                     ,carta26
+                                      ,carta27
+                                       ,carta28
+                                        ,carta29
+                                         ,carta30
+                                          ,carta31
+                                           ,carta32
+                                            ,carta33
+                                             ,carta34
+                                              ,carta35
+                                               ,carta36
+                                                ,carta37
+                                                 ,carta38
+                                                  ,carta39
+                                                   ,carta40
+];
 var cartaMaquina;
 var cartaJogador;
 
@@ -422,7 +459,7 @@ function obtemAtributoSelecionado() {
     var radioAtributo = document.getElementsByName("atributo");
 
     for (var i = 0; i < radioAtributo.length; i++) {
-        if (radioAtributo[i].checked == true) {
+        if (radioAtributo[i].checked) {
             return radioAtributo[i].value;
         }
     }
@@ -438,59 +475,68 @@ function jogar() {
     if (
         cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]) {
 
-        htmlResultado = "<p class='resultado-final'>Mandou muito bem,você venceu!!</p>";
+        htmlResultado = "<p class='resultado-final'> Mandou muito bem,você venceu!!</p>";
 
     } else if (
-        cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado] ) {
+        cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]) {
 
-        htmlResultado = "<p class='resultado-final'>Não foi dessa vez,você perdeu</p>"
+        htmlResultado = "<p class='resultado-final'>Não foi dessa vez,você perdeu</p>";
     } else {
 
-        htmlResultado = "<p class='resultado-final'>Empatou, que tal melhor de 5 ?</p>"
+        htmlResultado = "<p class='resultado-final'>Empatou, que tal melhor de 7 ?</p>";
     }
     
-    divResultado.innerHTML = htmlResultado
+    divResultado.innerHTML = htmlResultado;
+
     document.getElementById('btnJogar').disabled = true;
-    exibirCartaMaquina()
+    
+    exibirCartaMaquina();
    
 }
 
 function exibirCartaJogador() {
     var divCartaJogador = document.getElementById("carta-jogador");
     divCartaJogador.style.backgroundImage = `url(${cartaJogador.imagem})`;
-    // Chamar função de outro modo que traga o mesmo resultado da forma mais atualizada
-    // divCartaJogador.style.backgroundImage = url("+ cartaJogador.imagem + ")"
-
-    var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">';
-    var tagHTML = "<div id='opcoes' class= 'carta-status'>";
-
+  
+    var moldura =
+      '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">';
+    var tagHTML = "<div id='opcoes' class='carta-status'>";
+  
     var opcoesTexto = "";
     for (var atributo in cartaJogador.atributos) {
-        opcoesTexto +="<input type='radio'  name = 'atributo' value=''" + atributo + "'>" + atributo + " " + cartaJogador.atributos[atributo] + "<br>";
+      opcoesTexto +=
+        "<input type='radio' name='atributo' value='" +
+        atributo +
+        "'>" +
+        atributo +
+        " " +
+        cartaJogador.atributos[atributo] +
+        "<br>";
     }
     var nome = `<p class="carta-subtitle">${cartaJogador.nome}</p>`;
-
+  
     divCartaJogador.innerHTML = moldura + nome + tagHTML + opcoesTexto + "</div>";
-}
-
-
-function exibirCartaMaquina() {
+  }
+  
+  function exibirCartaMaquina() {
     var divCartaMaquina = document.getElementById("carta-maquina");
     divCartaMaquina.style.backgroundImage = `url(${cartaMaquina.imagem})`;
-    // Chamar função de outro modo que traga o mesmo resultado da forma mais atualizada
-    // divCartaJogador.style.backgroundImage = "url("+ cartaJogador.imagem + ")"
-
-    var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">';
-    var tagHTML = "<div id='opcoes' class = 'carta-status'>";
-
+    var moldura =
+      '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">';
+    var tagHTML = "<div id='opcoes' class='carta-status'>";
+  
     var opcoesTexto = "";
     for (var atributo in cartaMaquina.atributos) {
-        opcoesTexto +=
-            opcoesTexto = "<p type='text'  name = 'atributo' value=''" + atributo + "'>" + atributo + " " + cartaMaquina.atributos[atributo] + "<br>";
+      opcoesTexto +=
+        "<p type='text' name='atributo' value='" +
+        atributo +
+        "'>" +
+        atributo +
+        " " +
+        cartaMaquina.atributos[atributo] +
+        "</p>";
     }
     var nome = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`;
-
+  
     divCartaMaquina.innerHTML = moldura + nome + tagHTML + opcoesTexto + "</div>";
-
-
-}
+  }

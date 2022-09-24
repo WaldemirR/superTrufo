@@ -1,37 +1,38 @@
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: "Roboto Mono", monospace;
     min-height: 854px;
-    background-image: url('https://i.pinimg.com/originals/01/ae/b3/01aeb3e04d3ac5b8fc55b05318cdd90f.jpg');
-    background-color: #050303;
-    background-size: 200vh;
-    background-position: center;
+    background-image: url("https://img.freepik.com/vetores-premium/trofeu-de-futebol-abstrata-copa-do-mundo_7297-159.jpg?w=2000");
+    background-color: #ffffff;
+    background-position: center top;
     background-repeat: no-repeat;
     padding-bottom: 20vh;
-}
-
-.container {
+  }
+  
+  .container {
     text-align: center;
     padding: 20px;
-}
-
-.page-title {
-    color: #ffffff;
+  }
+  
+  .page-title {
+    color: #000000;
     margin: 5px 0;
-}
-
-button, .button-jogar {
-    padding: .8rem 1.5rem;
+  }
+  
+  button,
+  .button-jogar {
+    padding: 0.8rem 1.5rem;
     margin: 1rem 0;
-    border-radius: 20px;
+    border-radius: 5px;
     border: none;
-    font-size: 2rem;
-}
-
-h2 {
-    color: white;
-}
-
-#carta-jogador, #carta-maquina {
+    font-size: 1rem;
+  }
+  
+  h2 {
+    color: black;
+  }
+  
+  #carta-jogador,
+  #carta-maquina {
     width: 360px;
     height: 500px;
     overflow: auto;
@@ -46,74 +47,82 @@ h2 {
     background-position-x: 5px;
     background-position-y: 10px;
     border-radius: 33px;
-}
-
-#carta-jogador h3 {
+  }
+  
+  #carta-jogador h3 {
     text-align: center;
-}
-
-.carta-imagem {
+  }
+  
+  .carta-imagem {
     border: 1px solid black;
     height: 100px;
     margin: 10px;
-}
-
-.carta-imagem img {
+  }
+  
+  .carta-imagem img {
     width: 100%;
     height: 100%;
-}
-
-.carta-status {
+  }
+  
+  .carta-status {
     height: 160px;
-    margin: 0.1rem;
+    margin: 2rem;
     color: white;
     z-index: 2;
-}
-
-.carta-status input {
-    margin: 15px 10px;
-}
-
-.resultado-final {
-    color: white;
+  }
+  
+  .carta-status input {
+    margin: 20px 10px;
+  }
+  
+  .resultado-final {
+    color: #000000;
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: bolder;
     padding: 1rem;
-    border: 2px solid black;
-    background-color: black;
-}
-
-.--spacing {
+    border: 2px;
+    background-color: #d3d3d3;
+  }
+  
+  .--spacing {
     margin-left: 2.5rem;
-}
-
-form {
+  }
+  
+  form {
     display: flex;
     flex-direction: column;
-}
-
-.wrapper {
+  }
+  
+  .wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
-}
-
-.carta-subtitle {
+  }
+  
+  .carta-subtitle {
     z-index: 2;
     position: absolute;
-    top: 19px;
-    left: 35px;
+    top: 16px;
+    left: 37px;
     font-weight: 800;
     text-transform: uppercase;
-}
-
-#cartas {
+  }
+  
+  #cartas {
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
-
-.carta-status p {
+  }
+  
+  .carta-status p {
     margin-bottom: 2rem;
-}
+  }
+  
+  .page-logo {
+    width: 100px;
+  
+    bottom: 10px;
+    left: 10px;
+  }
+  
